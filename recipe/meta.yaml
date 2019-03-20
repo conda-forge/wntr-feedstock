@@ -1,16 +1,16 @@
 {% set name = "wntr" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/michaelbynum/WNTR/archive/0b30063fdace5d6149d22b883c03def3b3b42e4a.zip
-  sha256: f70bbedb1e0208fc74a53f4e50b5c73a6b758f8cffc29e15f840caf30f2632bf
+  url: https://github.com/michaelbynum/WNTR/archive/f5c8b8248c77a981fad8c2364394fa1d6d6e6d76.zip
+  sha256: 74713777510f0016fb516c3c14e49f94d49f383548fd2c190526225a6d797ee1
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [py<35]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
