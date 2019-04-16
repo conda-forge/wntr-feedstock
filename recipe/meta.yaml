@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/michaelbynum/WNTR/archive/f02a71016f0f97d47842da02d87df00f7ddd732b.zip
-  sha256: 602e5f06b46a20857318941c9a60561336534b70bfbdbd278b64ddc23f76271c
+  url: https://github.com/michaelbynum/WNTR/archive/9ef9ec0c0c0f0cbb4a56da84278d7045673877e1.zip
+  sha256: 1e10aaf911c997350a1392f7ccabe4b821fece271fdd77106adfabe0e73fc16c
 
 build:
   number: 2
