@@ -42,7 +42,7 @@ about:
   home: https://github.com/michaelbynum/WNTR
   license: Revised BSD
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE.md
   summary: 'Water Network Tool for Resilience'
 
 extra:
