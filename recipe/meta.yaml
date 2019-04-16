@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/michaelbynum/WNTR/archive/a5e2ce62d94b0f6679434c4b6100a36b506e3c90.zip
-  sha256: af9de1d1325e94772c43c24cc608feb4cf97cf27bb7c09ad542e6b8ee65c86fc
+  url: https://github.com/michaelbynum/WNTR/archive/d325dd45f3d3100aa64bb1f113a37f11ff8f03c8.zip
+  sha256: 5a7e29bbfd46cc3f830e3ed2aa402ae2c2b5c7b7df2eecde49255dff9631d548
 
 build:
-  number: 1
+  number: 2
   skip: True  # [py34]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -42,7 +42,7 @@ about:
   home: https://github.com/michaelbynum/WNTR
   license: Revised BSD
   license_family: BSD
-  license_file: LICENSE.txt
+  license_file: LICENSE.md
   summary: 'Water Network Tool for Resilience'
 
 extra:
