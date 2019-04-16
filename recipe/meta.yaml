@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/michaelbynum/WNTR/archive/a5e2ce62d94b0f6679434c4b6100a36b506e3c90.zip
-  sha256: af9de1d1325e94772c43c24cc608feb4cf97cf27bb7c09ad542e6b8ee65c86fc
+  url: https://github.com/michaelbynum/WNTR/archive/f02a71016f0f97d47842da02d87df00f7ddd732b.zip
+  sha256: 602e5f06b46a20857318941c9a60561336534b70bfbdbd278b64ddc23f76271c
 
 build:
-  number: 1
+  number: 2
   skip: True  # [py34]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
