@@ -1,7 +1,7 @@
 About wntr
 ==========
 
-Home: https://github.com/michaelbynum/WNTR
+Home: https://github.com/USEPA/WNTR
 
 Package license: Revised BSD
 
@@ -104,6 +104,7 @@ Current build status
       </details>
     </td>
   </tr>
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
 
 Current release info
@@ -198,5 +199,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@kaklise](https://github.com/kaklise/)
 * [@michaelbynum](https://github.com/michaelbynum/)
 
