@@ -12,6 +12,7 @@ source:
 build:
   number: 3
   skip: True  # [py34]
+  skip: True  # [py27]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
