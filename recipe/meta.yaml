@@ -6,12 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/michaelbynum/WNTR/archive/d325dd45f3d3100aa64bb1f113a37f11ff8f03c8.zip
-  sha256: 5a7e29bbfd46cc3f830e3ed2aa402ae2c2b5c7b7df2eecde49255dff9631d548
+  url: https://github.com/USEPA/WNTR/archive/0.2.1.zip
+  sha256: 8e4fc7d6555f655de2fec68a71373888617483ae7e6585e3cbe9769ce0589969
 
 build:
-  number: 2
+  number: 3
   skip: True  # [py34]
+  skip: True  # [py27]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -39,7 +40,7 @@ test:
     - wntr
 
 about:
-  home: https://github.com/michaelbynum/WNTR
+  home: https://github.com/USEPA/WNTR
   license: Revised BSD
   license_family: BSD
   license_file: LICENSE.md
@@ -48,3 +49,4 @@ about:
 extra:
   recipe-maintainers:
     - michaelbynum
+    - kaklise
