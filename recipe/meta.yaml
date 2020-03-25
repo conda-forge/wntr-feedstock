@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.2.1.zip
+  url: https://github.com/USEPA/WNTR/archive/{{ version }}.zip
   sha256: 8e4fc7d6555f655de2fec68a71373888617483ae7e6585e3cbe9769ce0589969
 
 build:
