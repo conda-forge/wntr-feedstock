@@ -1,18 +1,17 @@
 {% set name = "wntr" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.2.1.zip
-  sha256: 8e4fc7d6555f655de2fec68a71373888617483ae7e6585e3cbe9769ce0589969
+  url: https://github.com/USEPA/WNTR/archive/0.2.2.1.zip
+  sha256: 60e1fd15bd4c59878c4ac8f8895109c96fba924825610becc23176c370bb1a3e
 
 build:
-  number: 4
-  skip: True  # [py34]
-  skip: True  # [py27]
+  number: 0
+  skip: true  # [py<35]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -31,9 +30,6 @@ requirements:
     - pandas
     - scipy
     - matplotlib-base
-    - plotly
-    - nose
-    - openpyxl
 
 test:
   imports:
