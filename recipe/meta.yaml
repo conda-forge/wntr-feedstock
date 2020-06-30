@@ -1,18 +1,17 @@
 {% set name = "wntr" %}
-{% set version = "0.2.1" %}
+{% set version = "0.2.2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.2.1.zip
-  sha256: 8e4fc7d6555f655de2fec68a71373888617483ae7e6585e3cbe9769ce0589969
+  url: https://github.com/USEPA/WNTR/archive/524c5724c4877de23b069fdcbdc08558744b6d06.zip
+  sha256: ea4e5bac86249c8ba3bed4279cbab217f96884265543d583bfc44e3137d3677f
 
 build:
-  number: 4
-  skip: True  # [py34]
-  skip: True  # [py27]
+  number: 0
+  skip: true  # [py<35]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -31,9 +30,6 @@ requirements:
     - pandas
     - scipy
     - matplotlib-base
-    - plotly
-    - nose
-    - openpyxl
 
 test:
   imports:
@@ -41,7 +37,7 @@ test:
 
 about:
   home: https://github.com/USEPA/WNTR
-  license: Revised BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
   summary: 'Water Network Tool for Resilience'
