@@ -8,16 +8,20 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
-      win_python3.6.____cpython:
-        CONFIG: win_python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-      win_python3.7.____cpython:
-        CONFIG: win_python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
+      win_cxx_compilervs2015python3.6:
+        CONFIG: win_cxx_compilervs2015python3.6
+        CONDA_BLD_PATH: D:\\bld\\
+        UPLOAD_PACKAGES: True
+      win_cxx_compilervs2015python3.7:
+        CONFIG: win_cxx_compilervs2015python3.7
+        CONDA_BLD_PATH: D:\\bld\\
+        UPLOAD_PACKAGES: True
+      win_cxx_compilervs2015python3.8:
+        CONFIG: win_cxx_compilervs2015python3.8
+        CONDA_BLD_PATH: D:\\bld\\
+        UPLOAD_PACKAGES: True
     maxParallel: 4
   timeoutInMinutes: 360
-  variables:
-    CONDA_BLD_PATH: D:\\bld\\
 
   steps:
     - script: |
