@@ -1,13 +1,13 @@
 {% set name = "wntr" %}
-{% set version = "0.2.2.1" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/524c5724c4877de23b069fdcbdc08558744b6d06.zip
-  sha256: ea4e5bac86249c8ba3bed4279cbab217f96884265543d583bfc44e3137d3677f
+  url: https://github.com/USEPA/WNTR/archive/0.2.3.zip
+  sha256: c65ec97cf6466068fb4894f187b3d186a480bc18b98b39fe5bc0e1a6f119d5e4
 
 build:
   number: 0
@@ -34,6 +34,15 @@ requirements:
 test:
   imports:
     - wntr
+  requires:
+    - nose
+    - plotly
+    - folium
+    - utm
+    - openpyxl
+    - matplotlib
+  commands:
+    - nosetests -v wntr
 
 about:
   home: https://github.com/USEPA/WNTR
