@@ -5,11 +5,9 @@ Home: https://github.com/USEPA/WNTR
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wntr-feedstock/blob/master/LICENSE.txt)
 
 Summary: Water Network Tool for Resilience
-
-
 
 Current build status
 ====================
