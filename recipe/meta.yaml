@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/kaklise/WNTR/archive/refs/heads/build.zip
-  sha256: 17b3d0e2c477827164705553ed2fe327b689b4f431384c6a84407358a9f6f9fe
+  url: https://github.com/USEPA/WNTR/archive/0.3.1.zip
+  sha256: 56cfa63a50fc384d5076b7d2d907703762929232c4da57da4124a609ebe94b10
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<35]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
