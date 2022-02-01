@@ -1,5 +1,5 @@
 {% set name = "wntr" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/USEPA/WNTR/archive/0.3.1.zip
-  sha256: 56cfa63a50fc384d5076b7d2d907703762929232c4da57da4124a609ebe94b10
+  sha256: a2cfa22aed9a7719614753f99fb6ccaf74096d704b9dca159ad60b67aec68bcf
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<35]
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
@@ -49,7 +49,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
-  summary: 'Water Network Tool for Resilience'
+  summary: Water Network Tool for Resilience
 
 extra:
   recipe-maintainers:
