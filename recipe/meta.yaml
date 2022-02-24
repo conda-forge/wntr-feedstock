@@ -40,8 +40,8 @@ test:
     - utm
     - openpyxl
     - matplotlib
-  commands:
-    - nosetests -v wntr
+#  commands:
+#    - nosetests -v wntr
 
 about:
   home: https://github.com/USEPA/WNTR
