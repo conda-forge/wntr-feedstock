@@ -1,17 +1,16 @@
 {% set name = "wntr" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.3.1.zip
-  sha256: 56cfa63a50fc384d5076b7d2d907703762929232c4da57da4124a609ebe94b10
+  url: https://github.com/USEPA/WNTR/archive/0.4.0.zip
+  sha256: 1479bd35e72e60ba729ce6867082d04323cc6280b27aa098c7f946bd6502f4e9
 
 build:
-  number: 1
-  skip: true  # [py<35]
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
