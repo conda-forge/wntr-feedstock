@@ -41,7 +41,8 @@ test:
     - openpyxl
     - matplotlib
   commands:
-    - nosetests -v wntr
+    - nosetests -v wntr.tests.test_network_controls
+    - nosetests -v wntr.tests.test_network_valves
 
 about:
   home: https://github.com/USEPA/WNTR
