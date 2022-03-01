@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.4.0.zip
-  sha256: 1479bd35e72e60ba729ce6867082d04323cc6280b27aa098c7f946bd6502f4e9
+  url: https://github.com/michaelbynum/wntr/archive/dcc51079f70f4ae14fc15de14104bb1e5ff65b08.zip
+  sha256: ed92001849f7cc1fc582a686827585988a0e87977b4c3c30b980bad970b30ec5
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -40,8 +40,8 @@ test:
     - utm
     - openpyxl
     - matplotlib
-#  commands:
-#    - nosetests -v wntr
+  commands:
+    - nosetests -v wntr
 
 about:
   home: https://github.com/USEPA/WNTR
