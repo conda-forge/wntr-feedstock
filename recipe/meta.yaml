@@ -1,13 +1,13 @@
 {% set name = "wntr" %}
-{% set version = "0.4.0" %}
+{% set version = "v0.4.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.4.0.zip
-  sha256: 1479bd35e72e60ba729ce6867082d04323cc6280b27aa098c7f946bd6502f4e9
+  url: https://github.com/USEPA/WNTR/archive/0.4.1.zip
+  sha256: ad16bffab8eba956615427f47bc8fb5a10fae51926f87388f1058c49fc0b4035
 
 build:
   number: 0
@@ -40,8 +40,9 @@ test:
     - utm
     - openpyxl
     - matplotlib
-#  commands:
-#    - nosetests -v wntr
+  commands:
+    - nosetests -v wntr.tests.test_network_controls
+    - nosetests -v wntr.tests.test_network_valves
 
 about:
   home: https://github.com/USEPA/WNTR
