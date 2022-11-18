@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/USEPA/WNTR/archive/0.5.0.zip
-  sha256: 53527a434914b30af1d17b40078369164320dbaa6d9a264913473b087ff5cfff
+  sha256: 21bb1fde619094e550e9fec338feb3f78268596f8a9db7cace69aa4c216ca216
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
