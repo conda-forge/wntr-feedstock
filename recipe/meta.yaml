@@ -11,9 +11,6 @@ source:
 
 build:
   number: 1
-  script_env:
-    - BUILD_WNTR_EXTENSIONS="true"
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
