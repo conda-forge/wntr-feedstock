@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.5.0.zip
-  sha256: 21bb1fde619094e550e9fec338feb3f78268596f8a9db7cace69aa4c216ca216
+  url: https://pypi.io/packages/source/W/WNTR/wntr-0.5.0.tar.gz
+  sha256: 7c845eea4dd30d5ca5354335c58f6bc57e003664119c420355af779ac04f36f2
 
 build:
-  number: 0
+  number: 1
   script_env:
     - BUILD_WNTR_EXTENSIONS="true"
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
