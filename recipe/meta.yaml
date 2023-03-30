@@ -1,16 +1,16 @@
 {% set name = "wntr" %}
-{% set version = "v0.5.0" %}
+{% set version = "v1.0.0.rc2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/0.5.0.zip
-  sha256: 21bb1fde619094e550e9fec338feb3f78268596f8a9db7cace69aa4c216ca216
+  url: https://github.com/USEPA/WNTR/archive/1.0.0rc2.zip
+  sha256: ea8c64712129cdc3c54a0eaef0d9e40041c077c194188d403219a5e42858e221
 
 build:
-  number: 1
+  number: 0
   script_env:
     - BUILD_WNTR_EXTENSIONS="true"
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
