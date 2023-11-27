@@ -31,6 +31,7 @@ requirements:
     - pandas
     - scipy
     - matplotlib-base
+    - setuptools
 
 test:
   imports:
@@ -42,6 +43,7 @@ test:
     - utm
     - openpyxl
     - matplotlib
+    - setuptools
   commands:
     - nosetests -v wntr.tests.test_network_controls
     - nosetests -v wntr.tests.test_network_valves
