@@ -1,13 +1,13 @@
 {% set name = "wntr" %}
-{% set version = "v1.1.0" %}
+{% set version = "v1.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/1.1.0.zip
-  sha256: c72218ca5322c161dac7c3f4cd0061acaae9bc17f3f9d57f76b3abf47842c993
+  url: https://github.com/USEPA/WNTR/archive/1.2.0.zip
+  sha256: 7230b5210d3e76d18633a385d4b65f166d6241efcd12bb805ba475936eeb8d67
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - numpy
   run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - {{ pin_compatible('numpy', lower_bound='1.21', upper_bound='2.0') }}
     - networkx
     - pandas
     - scipy
