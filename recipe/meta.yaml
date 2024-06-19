@@ -45,8 +45,8 @@ test:
     - matplotlib
     - setuptools
   commands:
-    - nosetests -v wntr.tests.test_network_controls
-    - nosetests -v wntr.tests.test_network_valves
+    - pytest --pyargs wntr.tests.test_network_controls
+    - pytest --pyargs wntr.tests.test_network_valves
 
 about:
   home: https://github.com/USEPA/WNTR
