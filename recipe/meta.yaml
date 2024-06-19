@@ -37,7 +37,7 @@ test:
   imports:
     - wntr
   requires:
-    - nose
+    - pytest
     - plotly
     - folium
     - utm
