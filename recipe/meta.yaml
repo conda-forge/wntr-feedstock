@@ -32,6 +32,7 @@ requirements:
     - scipy
     - matplotlib-base
     - setuptools
+    - imp
 
 test:
   imports:
@@ -44,6 +45,7 @@ test:
     - openpyxl
     - matplotlib
     - setuptools
+    - imp
   commands:
     - nosetests -v wntr.tests.test_network_controls
     - nosetests -v wntr.tests.test_network_valves
