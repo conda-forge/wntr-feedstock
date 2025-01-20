@@ -1,13 +1,13 @@
 {% set name = "wntr" %}
-{% set version = "v1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/1.2.0.zip
-  sha256: 7230b5210d3e76d18633a385d4b65f166d6241efcd12bb805ba475936eeb8d67
+  url: https://github.com/USEPA/WNTR/archive/1.3.0.zip
+  sha256: 78aa135219cd45685a8377a2e4d77d57e44c8354616df969b933c1d8bf971b24
 
 build:
   number: 0
@@ -27,9 +27,9 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy', lower_bound='1.21', upper_bound='2.0') }}
+    - {{ pin_compatible('scipy', upper_bound='1.13') }}
     - networkx
     - pandas
-    - scipy
     - matplotlib-base
     - setuptools
 
@@ -42,6 +42,10 @@ test:
     - folium
     - utm
     - openpyxl
+    - {{ pin_compatible('geopandas', upper_bound='1.0') }}
+    - {{ pin_compatible('fiona', upper_bound='1.10') }}
+    - rasterio
+    - rtree
     - matplotlib
     - setuptools
   commands:
