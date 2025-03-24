@@ -27,9 +27,9 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy', lower_bound='1.21', upper_bound='2.0') }}
+    - {{ pin_compatible('scipy', upper_bound='1.13') }}
     - networkx
     - pandas
-    - scipy
     - matplotlib-base
     - setuptools
 
@@ -38,12 +38,16 @@ test:
     - wntr
   requires:
     - pytest
-    - plotly
+    - {{ pin_compatible('plotly', upper_bound='6.0') }}
     - folium
     - utm
     - openpyxl
     - matplotlib
     - setuptools
+    - {{ pin_compatible('geopandas', upper_bound='1.0') }}
+    - {{ pin_compatible('fiona', upper_bound='1.10') }}
+    - rasterio
+    - rtree
   commands:
     - pytest --pyargs wntr.tests.test_network_controls
     - pytest --pyargs wntr.tests.test_network_valves
