@@ -1,16 +1,16 @@
 {% set name = "wntr" %}
-{% set version = "v1.2.0" %}
+{% set version = "1.3.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/USEPA/WNTR/archive/1.2.0.zip
-  sha256: 7230b5210d3e76d18633a385d4b65f166d6241efcd12bb805ba475936eeb8d67
+  url: https://github.com/USEPA/WNTR/archive/1.3.2.zip
+  sha256: d4155b5d1130417b6137390bdfe47c1e5b0c4a34ef7141082bf7f810744b331d
 
 build:
-  number: 1
+  number: 2
   script_env:
     - BUILD_WNTR_EXTENSIONS="true"
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
@@ -25,12 +25,13 @@ requirements:
     - python
     - pip
     - numpy
+    - setuptools
   run:
     - python
     - {{ pin_compatible('numpy', lower_bound='1.21', upper_bound='2.0') }}
     - networkx
     - pandas
-    - scipy
+    - {{ pin_compatible('scipy', upper_bound='1.13') }}
     - matplotlib-base
     - setuptools
 
@@ -39,12 +40,16 @@ test:
     - wntr
   requires:
     - pytest
-    - plotly
+    - {{ pin_compatible('plotly', upper_bound='6.0') }}
     - folium
     - utm
     - openpyxl
     - matplotlib
     - setuptools
+    - {{ pin_compatible('geopandas', upper_bound='1.0') }}
+    - {{ pin_compatible('fiona', upper_bound='1.10') }}
+    - rasterio
+    - rtree
   commands:
     - pytest --pyargs wntr.tests.test_network_controls
     - pytest --pyargs wntr.tests.test_network_valves
@@ -61,3 +66,4 @@ extra:
     - kbonney
     - michaelbynum
     - kaklise
+    - dbhart
