@@ -262,4 +262,5 @@ Feedstock Maintainers
 
 * [@kaklise](https://github.com/kaklise/)
 * [@michaelbynum](https://github.com/michaelbynum/)
-
+* [@dbhart](https://github.com/dbhart)
+* [@kbonney](https://github.com/kbonney)
