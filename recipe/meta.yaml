@@ -47,7 +47,6 @@ test:
     - matplotlib
     - setuptools
     - geopandas
-    - fiona
     - rasterio
     - rtree
   commands:
