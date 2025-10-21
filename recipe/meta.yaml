@@ -10,7 +10,7 @@ source:
   sha256: aa31f5c1a383203cf1b2212bb462195f792efacc5c2ace184dd247ed11fa077b
 
 build:
-  number: 0
+  number: 1
   script_env:
     - BUILD_WNTR_EXTENSIONS="true"
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
