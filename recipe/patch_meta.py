@@ -26,7 +26,10 @@ current_version = re.search(r'{%\s*set version\s*=\s*"([^"]+)"', content).group(
 current_build = int(re.search(r'number:\s*(\d+)', content).group(1))
 build_number = 0 if version != current_version else current_build + 1
 
+pypi_url = 'https://pypi.io/packages/source/W/wntr/wntr-{{ version }}.tar.gz'
+
 content = re.sub(r'({% set version = ")[^"]+(")', f'\\g<1>{version}\\2', content)
+content = re.sub(r'url:\s*\S+', f'url: {pypi_url}', content)
 content = re.sub(r'(sha256:\s*)\S+', f'\\g<1>{sha256}', content)
 content = re.sub(r'(number:\s*)\d+', f'\\g<1>{build_number}', content)
 
