@@ -22,11 +22,15 @@ sha256 = re.search(r'sha256:\s*(\S+)', grayskull).group(1)
 with open(feedstock_path) as f:
     content = f.read()
 
+current_version = re.search(r'{%\s*set version\s*=\s*"([^"]+)"', content).group(1)
+current_build = int(re.search(r'number:\s*(\d+)', content).group(1))
+build_number = 0 if version != current_version else current_build + 1
+
 content = re.sub(r'({% set version = ")[^"]+(")', f'\\g<1>{version}\\2', content)
 content = re.sub(r'(sha256:\s*)\S+', f'\\g<1>{sha256}', content)
-content = re.sub(r'(number:\s*)\d+', '\\g<1>0', content)
+content = re.sub(r'(number:\s*)\d+', f'\\g<1>{build_number}', content)
 
 with open(feedstock_path, 'w') as f:
     f.write(content)
 
-print(f"Patched {feedstock_path}: version={version}, sha256={sha256}, build number=0")
+print(f"Patched {feedstock_path}: version={version}, sha256={sha256}, build number={build_number}")
