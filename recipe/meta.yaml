@@ -1,5 +1,5 @@
 {% set name = "wntr" %}
-{% set version = "1.5.0rc1" %}
+{% set version = "1.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/USEPA/WNTR/archive/{{ version }}.zip
-  sha256: cdc35f9810cc02b738a03bfaed793cfb16398badd5fe36e3955cf7072788b6a3
+  sha256: a2a97d575344057810ec4bda675babf6c878ee8a456dc49a6bbc5e59e458e101
 
 build:
   number: 0
