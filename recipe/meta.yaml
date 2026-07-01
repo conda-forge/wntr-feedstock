@@ -51,8 +51,8 @@ test:
     - geopandas
     - rasterio
     - rtree
-  commands:
-    - pytest wntr/tests/ --ignore=wntr/tests/test_demos.py --ignore=wntr/tests/test_examples.py
+commands:
+  - pytest wntr/tests/ --ignore-glob="*/test_demos.py" --ignore-glob="*/test_examples.py"
 
 about:
   home: https://github.com/USEPA/WNTR
