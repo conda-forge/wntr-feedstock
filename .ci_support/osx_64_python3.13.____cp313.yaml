@@ -13,7 +13,7 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '19'
+- '21'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
@@ -26,3 +26,6 @@ python:
 - 3.13.* *_cp313
 target_platform:
 - osx-64
+zip_keys:
+- - python
+  - channel_sources
